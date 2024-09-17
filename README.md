@@ -26,8 +26,14 @@ __weak void onButtonL3Click() {}
 __weak void onButtonR3Click() {}
 
 __weak void onButtonUpClick() {}
+
 __weak void onButtonDownClick() {}
+
 __weak void onButtonLeftClick() {}
+
 __weak void onButtonRightClick() {}
+
 __weak void onL2Change(int l2Value) {}
+
 __weak void onR2Change(int r2Value) {}
+
