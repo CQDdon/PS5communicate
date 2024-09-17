@@ -1,10 +1,10 @@
 # PS5communicate
 Using USBHostShield and Arduino to receive signals from PS5 than transmit them to STM32
 # Functions:
-__weak void onLeftJoystickMove(int x, int y) {}
-__weak void onRightJoystickMove(int x, int y) {}
-__weak void onButtonCreateClick() {}
-__weak void onButtonOptionsClick() {}
+__weak void onLeftJoystickMove(int x, int y) {} 
+__weak void onRightJoystickMove(int x, int y) {} 
+__weak void onButtonCreateClick() {} 
+__weak void onButtonOptionsClick() {}  
 __weak void onButtonTriangleClick() {}
 __weak void onButtonCircleClick() {}
 __weak void onButtonCrossClick() {}
