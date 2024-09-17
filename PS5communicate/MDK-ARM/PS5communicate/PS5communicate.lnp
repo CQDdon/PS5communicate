@@ -1,0 +1,25 @@
+--cpu Cortex-M3
+"ps5communicate\startup_stm32f103xb.o"
+"ps5communicate\main.o"
+"ps5communicate\stm32f1xx_it.o"
+"ps5communicate\stm32f1xx_hal_msp.o"
+"ps5communicate\stm32f1xx_hal_gpio_ex.o"
+"ps5communicate\stm32f1xx_hal_tim.o"
+"ps5communicate\stm32f1xx_hal_tim_ex.o"
+"ps5communicate\stm32f1xx_hal_uart.o"
+"ps5communicate\stm32f1xx_hal.o"
+"ps5communicate\stm32f1xx_hal_rcc.o"
+"ps5communicate\stm32f1xx_hal_rcc_ex.o"
+"ps5communicate\stm32f1xx_hal_gpio.o"
+"ps5communicate\stm32f1xx_hal_dma.o"
+"ps5communicate\stm32f1xx_hal_cortex.o"
+"ps5communicate\stm32f1xx_hal_pwr.o"
+"ps5communicate\stm32f1xx_hal_flash.o"
+"ps5communicate\stm32f1xx_hal_flash_ex.o"
+"ps5communicate\stm32f1xx_hal_exti.o"
+"ps5communicate\system_stm32f1xx.o"
+"ps5communicate\controller.o"
+--strict --scatter "PS5communicate\PS5communicate.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "PS5communicate.map" -o PS5communicate\PS5communicate.axf
