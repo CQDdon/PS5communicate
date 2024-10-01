@@ -43,7 +43,7 @@ void processData(char *data) {
 
     if ((ptr = strstr(data, "RX:")) != NULL) {
         int rightHatX = strtol(ptr + 3, &ptr, 10);
-        int rightHatY = strtol(ptr + 3, NULL, 10);  
+        int rightHatY = strtol(ptr + 4, NULL, 10);  
         onRightJoystickMove(rightHatX, rightHatY);
     }
 
