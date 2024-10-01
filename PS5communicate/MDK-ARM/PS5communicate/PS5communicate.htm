@@ -3,7 +3,7 @@
 <title>Static Call Graph - [PS5communicate\PS5communicate.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image PS5communicate\PS5communicate.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6140002: Last Updated: Tue Sep 17 17:30:23 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6140002: Last Updated: Wed Oct  2 04:46:43 2024
 <BR><P>
 <H3>Maximum Stack Usage =        152 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -773,7 +773,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[88]"></a>onButtonCircleClick</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, controller.o(.text.onButtonCircleClick))
+<P><STRONG><a name="[88]"></a>onButtonCircleClick</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, main.o(.text.onButtonCircleClick))
 <BR><BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;processData
 </UL>
 
@@ -833,7 +833,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;processData
 </UL>
 
-<P><STRONG><a name="[83]"></a>onLeftJoystickMove</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, controller.o(.text.onLeftJoystickMove))
+<P><STRONG><a name="[83]"></a>onLeftJoystickMove</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, main.o(.text.onLeftJoystickMove))
 <BR><BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;processData
 </UL>
 
@@ -848,11 +848,12 @@ Global Symbols
 <P><STRONG><a name="[78]"></a>processData</STRONG> (Thumb, 444 bytes, Stack size 24 bytes, controller.o(.text.processData))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = processData &rArr; strtol &rArr; _strtoul
 </UL>
-<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strstr
+<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;onLeftJoystickMove
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;onButtonCircleClick
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strstr
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strtol
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;onRightJoystickMove
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;onR2Change
-<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;onLeftJoystickMove
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;onL2Change
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;onButtonUpClick
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;onButtonTriangleClick
@@ -867,7 +868,6 @@ Global Symbols
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;onButtonDownClick
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;onButtonCrossClick
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;onButtonCreateClick
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;onButtonCircleClick
 </UL>
 <BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_RxCpltCallback
 </UL>

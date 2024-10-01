@@ -62,6 +62,45 @@ static void MX_USART1_UART_Init(void);
 char rxBuffer;
 char msgBuffer[BUFFER_SIZE];
 uint8_t msgIndex = 0;
+uint8_t count = 0;
+uint8_t x_val = 0;
+uint8_t y_val = 0;
+
+/* Begin PS5 handle function */
+
+//void onLeftJoystickMove(int x, int y) {}
+//void onRightJoystickMove(int x, int y) {}
+
+//void onL2Change(int l2Value) {}
+//void onR2Change(int r2Value) {}
+
+//void onButtonCreateClick() {}
+//void onButtonOptionsClick() {}
+//void onButtonTriangleClick() {}
+//void onButtonCircleClick() {}
+//void onButtonCrossClick() {}
+//void onButtonSquareClick() {}
+//void onButtonL1Click() {}
+//void onButtonR1Click() {}
+//void onButtonL3Click() {}
+//void onButtonR3Click() {}
+//void onButtonUpClick() {}
+//void onButtonDownClick() {}
+//void onButtonLeftClick() {}
+//void onButtonRightClick() {}
+
+
+void onButtonCircleClick() 
+{
+	count++;
+}
+
+void onLeftJoystickMove(int x, int y)
+{
+	x_val = x;
+	y_val = y;
+}
+/* End handle function */
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
 	if (huart->Instance == USART1) {
