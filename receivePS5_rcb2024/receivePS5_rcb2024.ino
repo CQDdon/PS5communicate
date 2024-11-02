@@ -86,13 +86,6 @@ void loop() {
         Serial.print(F("\n")); 
     }
 
-    // Set the left trigger to resist at the right trigger's level
-    static uint8_t oldR2Value = 0xFF;
-    if (PS5.getAnalogButton(R2) != oldR2Value) {
-      oldR2Value = PS5.getAnalogButton(R2);
-      PS5.leftTrigger.setTriggerForce(oldR2Value, 255);
-    }
-
     // Hold the PS button for 1 second to disconnect the controller
     // This prevents the controller from disconnecting when it is reconnected,
     // as the PS button is sent when it reconnects
